@@ -1,0 +1,52 @@
+<div class="page login-page">
+  <div class="container">
+    <div class="card" style="max-width:820px;margin:0 auto;display:flex;gap:24px;align-items:flex-start;padding:28px">
+      <div style="flex:1">
+        <h1 data-i18n="login.welcome">Welcome back</h1>
+        <p class="muted" data-i18n="login.signin_desc">Sign in to continue to the Home area.</p>
+        <form id="login-form">
+          <div id="register-section">
+            <form id="register-form">
+              <label>
+                <span><span class="required">*</span> <span data-i18n="login.isbn_label">ISBN number</span></span>
+                <input id="isbn" name="isbn" type="text" required data-i18n-placeholder="login.isbn_placeholder" placeholder="Enter ISBN">
+              </label>
+              <label>
+                <span data-i18n="login.name_label">Name</span>
+                <input id="reg-name" name="name" type="text" data-i18n-placeholder="login.name_placeholder" placeholder="Full name">
+              </label>
+              <label>
+                <span data-i18n="login.email_label">Email address</span>
+                <input id="reg-email" name="email" type="email" data-i18n-placeholder="login.email_placeholder" placeholder="you@example.com">
+              </label>
+              <div style="display:flex;gap:12px">
+                <button type="submit" class="btn" data-i18n="login.register_btn">Register</button>
+                <a href="?page=public" class="nav-link" data-i18n="login.public_btn" style="background:transparent;padding:8px;border-radius:8px;color:var(--accent)">Public</a>
+              </div>
+            </form>
+            <p style="margin-top:12px;font-size:0.95rem"> <a href="#" id="show-admin" data-i18n="login.admin_signin">Admin sign-in</a></p>
+          </div>
+          <div id="admin-section" style="display:none">
+            <form id="admin-form">
+              <label>
+                <span data-i18n="login.username">Username</span>
+                <input id="username" name="username" autocomplete="username" data-i18n-placeholder="login.username" placeholder="Admin">
+              </label>
+              <label>
+                <span data-i18n="login.password">Password</span>
+                <input id="password" name="password" type="password" autocomplete="current-password" data-i18n-placeholder="login.password" placeholder="Password">
+              </label>
+              <div style="display:flex;gap:12px">
+                <button type="submit" class="btn" data-i18n="login.signin_btn">Sign in</button>
+                <a href="?page=public" class="nav-link" data-i18n="login.public_btn" style="background:transparent;padding:8px;border-radius:8px;color:var(--accent)">Public</a>
+              </div>
+            </form>
+            <p style="margin-top:12px;font-size:0.95rem"><a href="#" id="show-register" data-i18n="login.register_switch">Back to register</a></p>
+          </div>
+        <div class="card-footer" style="margin-top:18px;text-align:center;color:var(--subtext);font-size:0.95rem">
+          <small data-i18n="footer.copy">© App1 — Simple SPA</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

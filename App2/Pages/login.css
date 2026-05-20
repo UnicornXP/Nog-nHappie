@@ -1,0 +1,76 @@
+﻿.page-shell {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(47, 38, 24, 0.1);
+  padding: 3rem;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.auth-form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #6d5f4f;
+}
+
+.auth-form input {
+  width: 100%;
+  border: 1px solid rgba(47, 38, 24, 0.1);
+  border-radius: 18px;
+  padding: 1rem 1.15rem;
+  background: #fbf6ef;
+  color: #2f2619;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  padding-right: 5.5rem;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #453a28;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+}
+
+.password-toggle:focus {
+  outline: 2px solid rgba(69, 58, 40, 0.35);
+  outline-offset: 2px;
+}
+
+.auth-form button {
+  width: fit-content;
+}
+
+.small-note {
+  margin-top: 1.5rem;
+  color: #7f6e59;
+}
+
+.small-note a {
+  color: #453a28;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.small-note a:hover {
+  text-decoration: underline;
+}

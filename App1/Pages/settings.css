@@ -1,0 +1,4 @@
+.settings-page{padding:8px 0}
+.settings-page label{display:flex;flex-direction:column;max-width:360px}
+.settings-page select{margin-top:8px;padding:8px;border-radius:8px}
+.settings-page button{margin-top:8px}

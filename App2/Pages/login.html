@@ -1,0 +1,24 @@
+<section class="page-shell">
+  <h1 data-i18n="login.title">Register</h1>
+  <p data-i18n="login.description">Please register below.</p>
+  <form id="loginForm" class="auth-form" novalidate>
+    <label>
+      <span>*ISBN number:</span>
+      <input type="text" name="isbn" placeholder="978-0-123456-47-2" required />
+    </label>
+    <label>
+      <span>Name:</span>
+      <input type="text" name="name" placeholder="John Doe" />
+    </label>
+    <label>
+      <span>Email address:</span>
+      <input type="email" name="email" placeholder="you@example.com" />
+    </label>
+    <button type="submit" data-i18n="login.signIn">Register</button>
+    <p class="error-message" id="loginError" role="alert" aria-live="polite"></p>
+  </form>
+  <p class="small-note">
+    <span data-i18n="login.publicNote">Public access is available on the </span>
+    <a href="?page=public" data-link data-i18n="login.publicPage">Public page</a>.
+  </p>
+</section>

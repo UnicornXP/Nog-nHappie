@@ -1,0 +1,119 @@
+/* Modernized global styles */
+:root{
+	--bg: #fbf7f0;
+	--card: #fffdf5;
+	--olive: #787449;
+	--earth: #603913;
+	--subtext: #222222;
+	--heading: #111111;
+	--radius: 12px;
+	--paper-speck: rgba(96,57,19,0.05);
+	--header-text: #ffffff;
+
+	/* layout tokens */
+	--max-width: 1200px;
+	--container-pad: clamp(16px, 3vw, 48px);
+	--space-sm: 8px;
+	--space-md: 16px;
+	--space-lg: 32px;
+	--shadow-1: 0 8px 28px rgba(96,57,19,0.06);
+	--shadow-2: 0 18px 50px rgba(96,57,19,0.10);
+	--transition: 200ms cubic-bezier(.2,.9,.2,1);
+}
+
+* { box-sizing: border-box; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; }
+
+html,body{height:100%;}
+body {
+	font-family: 'Montserrat', system-ui, sans-serif;
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(180deg,#fbf7f0 0%, #f7f3ea 100%);
+	color: var(--subtext);
+	line-height: 1.45;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:calc(var(--container-pad) / 2)}
+
+.site-header{
+	position:sticky;
+	top:0;
+	z-index:60;
+	background: linear-gradient(180deg, rgba(120,116,73,0.96), rgba(120,116,73,0.9));
+	color: var(--header-text);
+	backdrop-filter: blur(6px);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+	border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px calc(var(--container-pad) / 2);gap:12px}
+.brand-link{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.brand-logo{height:48px;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,0.12))}
+.brand-text{font-family:'Playfair Display',serif;font-size:1.4rem;margin:0;color:var(--header-text);letter-spacing:0.2px}
+.nav{display:flex;gap:8px}
+.nav-link{color:rgba(255,255,255,0.95);text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:600;background: rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);transition: background var(--transition), transform var(--transition), box-shadow var(--transition);}
+.nav-link:hover{background: rgba(255,255,255,0.12);transform: translateY(-3px);box-shadow:var(--shadow-1)}
+
+main#app{padding:calc(var(--container-pad));margin:var(--space-lg) auto;max-width:var(--max-width);background:transparent;border-radius:10px}
+.page h1, .page h2, .page h3 { font-family: 'Playfair Display', serif; color: var(--heading); margin:0 0 12px 0 }
+
+.site-footer{padding:36px 0;color:var(--subtext);text-align:center;font-size:0.95rem;border-top:1px solid rgba(120,116,73,0.06)}
+
+/* Utilities */
+.page h1{margin-top:0}
+a{color:var(--olive)}
+
+/* Card helper */
+.card{background:var(--card);border-radius:14px;padding:18px;box-shadow:var(--shadow-1);border:1px solid rgba(120,116,73,0.06)}
+
+/* Forms */
+form{display:flex;flex-direction:column;gap:12px}
+input, textarea, select, .form-control {
+	width:100%;
+	padding:12px 14px;
+	border:1px solid rgba(120,116,73,0.12);
+	border-radius:10px;
+	background: rgba(255,255,255,0.98);
+	font-size:1rem;
+	color:var(--subtext);
+	transition: border-color .15s ease, box-shadow .15s ease, transform var(--transition);
+}
+input::placeholder, textarea::placeholder { color: rgba(96,57,19,0.38) }
+input:focus, textarea:focus, select:focus, .form-control:focus{outline: none;border-color: var(--earth);box-shadow: 0 10px 30px rgba(96,57,19,0.07);transform: translateY(-2px)}
+
+/* Password reveal removed: toggle no longer used */
+
+/* Buttons */
+button, .btn, .btn.secondary, button.secondary {
+	display:inline-flex;align-items:center;gap:8px;justify-content:center;cursor:pointer;padding:10px 16px;border-radius:12px;border:none;font-weight:700;transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+}
+button, .btn { background: linear-gradient(90deg, var(--olive), var(--earth)); color:#fff; box-shadow: 0 10px 30px rgba(96,57,19,0.12); }
+.btn.secondary{ background: linear-gradient(90deg, var(--olive), var(--earth)); color:#fff; border:none; box-shadow: 0 10px 30px rgba(96,57,19,0.12); }
+button:hover, .btn:hover, .btn.secondary:hover, button.secondary:hover{ transform: translateY(-4px); box-shadow: 0 20px 40px rgba(96,57,19,0.14) }
+
+@media (max-width:600px){ .header-inner{flex-direction:column;align-items:flex-start;gap:8px} }
+
+[data-theme="dark"]{
+	--bg: #0f0f0c;
+	--card: #1c1b18;
+	--subtext: #f1efe9;
+	--heading: #f1efe9;
+	--paper-speck: rgba(255,255,255,0.02);
+	--header-text: #fff;
+}
+
+[data-theme="dark"] input, [data-theme="dark"] textarea, [data-theme="dark"] select, [data-theme="dark"] .form-control{ background: var(--card); border: 1px solid rgba(255,255,255,0.06); color: var(--subtext); box-shadow: none }
+[data-theme="dark"] input::placeholder, [data-theme="dark"] textarea::placeholder { color: rgba(255,255,255,0.6); }
+[data-theme="dark"] .nav-link{ color: rgba(255,255,255,0.95); background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04) }
+[data-theme="dark"] .site-header{ background: rgba(120,116,73,0.96); backdrop-filter: blur(6px) }
+
+/* Themed modal dialog (modern) */
+.spa-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:9999;visibility:hidden;opacity:0;transition:opacity .18s ease, visibility .18s ease}
+.spa-modal.open{visibility:visible;opacity:1}
+.spa-modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,0.45);backdrop-filter: blur(2px)}
+.spa-modal-dialog{position:relative;z-index:2;width:min(560px,94%);background:var(--card);border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,0.45);overflow:hidden;transform:translateY(-8px);transition:transform .2s ease;border:none}
+.spa-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;background:linear-gradient(90deg,var(--olive),var(--earth));color:var(--header-text)}
+.spa-modal-body{padding:18px 16px;color:var(--subtext);font-family:Montserrat, system-ui, sans-serif}
+.spa-modal-actions{padding:12px 16px;display:flex;justify-content:flex-end;gap:8px}
+
+[data-theme="dark"] .spa-modal-dialog{background:var(--card)}
+[data-theme="dark"] .spa-modal-body{color:var(--subtext)}

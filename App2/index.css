@@ -1,0 +1,219 @@
+﻿:root {
+  color-scheme: light;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bg: #f6f1e8;
+  --surface: #ffffff;
+  --surface-soft: #fbf6ef;
+  --text: #2f2619;
+  --heading: #27201a;
+  --muted: #7f6e59;
+  --accent: #453a28;
+  --accent-soft: #b4a472;
+  --header-bg: #ffffff;
+  --header-text: #2f2619;
+  --border: rgba(47, 38, 24, 0.08);
+  --input-bg: rgba(251, 246, 239, 1);
+  --shadow: 0 24px 80px rgba(47, 38, 24, 0.08);
+  --button-shadow: 0 18px 45px rgba(69, 58, 40, 0.16);
+  --error: #9f452d;
+}
+
+html.theme-dark {
+  color-scheme: dark;
+  --bg: #1f1a15;
+  --surface: #27211a;
+  --surface-soft: #322b21;
+  --text: #f3e8d3;
+  --heading: #f7efd9;
+  --muted: #b3a78c;
+  --accent: #b8a66a;
+  --accent-soft: #d6c59f;
+  --header-bg: rgba(39, 34, 27, 0.95);
+  --header-text: #f7efd9;
+  --border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+  --button-shadow: 0 18px 45px rgba(0, 0, 0, 0.2);
+  --error: #f07d5e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-family, 'Inter'), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.header-logo {
+  max-height: 56px;
+  width: auto;
+}
+
+.page-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.page-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.82rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--heading);
+  background: rgba(120, 116, 73, 0.08);
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.page-nav a:hover,
+.page-nav a:focus-visible {
+  background: rgba(120, 116, 73, 0.16);
+  transform: translateY(-1px);
+}
+
+.page-view {
+  flex: 1;
+  width: min(1400px, 100%);
+  padding: 3rem 2rem 4rem;
+  margin: 0 auto;
+}
+
+.page-shell {
+  background: var(--surface);
+  border-radius: 32px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading);
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 4vw, 4.5rem);
+  line-height: 1.02;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.12;
+}
+
+p {
+  margin: 0 0 1.5rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+button,
+.link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  border-radius: 18px;
+  border: none;
+  background: var(--accent);
+  color: #ffffff;
+  font-weight: 700;
+  box-shadow: var(--button-shadow);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+  10% {
+    opacity: 0.88;
+    filter: brightness(1.1);
+  }
+  20% {
+    opacity: 0.96;
+  }
+  30% {
+    opacity: 0.82;
+    filter: brightness(1.05);
+  }
+  50% {
+    opacity: 0.9;
+  }
+  70% {
+    opacity: 0.95;
+  }
+}
+
+button:hover,
+.link-button:hover,
+button:focus-visible,
+.link-button:focus-visible {
+  background: var(--accent-soft);
+  animation: flicker 0.35s ease-in-out 1;
+}
+
+input,
+select {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1rem 1.15rem;
+  background: var(--input-bg);
+  color: var(--text);
+  outline: none;
+  box-shadow: inset 0 1px 2px rgba(47, 38, 24, 0.05);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: rgba(120, 116, 73, 0.3);
+  box-shadow: inset 0 1px 2px rgba(47, 38, 24, 0.1);
+}
+
+.error-message {
+  color: var(--error);
+  margin-top: 0.75rem;
+}

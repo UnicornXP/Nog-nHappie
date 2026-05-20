@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>App2 SPA</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1e293b" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand">
+        <img src="logo.svg" alt="Nog 'n Happie" class="header-logo" />
+      </div>
+      <nav class="page-nav" aria-label="Primary">
+        <a href="?page=login" data-link data-page="login" data-i18n="nav.login">Login</a>
+        <a href="?page=public" data-link data-page="public" data-i18n="nav.public">Public</a>
+        <a href="?page=settings" data-link data-page="settings" data-i18n="nav.settings">Settings</a>
+      </nav>
+    </header>
+    <main id="view" class="page-view" role="main"></main>
+  </div>
+  <script src="index.js" defer></script>
+</body>
+</html>

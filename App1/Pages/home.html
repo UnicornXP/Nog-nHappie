@@ -1,0 +1,123 @@
+<div class="page home-page">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <div>
+      <h1 data-i18n="home.title">Home</h1>
+      <p class="muted" data-i18n="home.signedin">You're signed in as <strong>Admin</strong>.</p>
+    </div>
+    <div>
+      <button id="logout-btn" data-i18n="home.logout">Logout</button>
+    </div>
+  </div>
+
+  <section class="home-hero">
+    <div class="hero-text">
+      <h2 data-i18n="home.hero.title">Welcome back, Admin</h2>
+      <p data-i18n="home.hero.subtitle">Overview of your account and recent activity</p>
+    </div>
+    <div class="hero-actions">
+      <a href="?page=public" class="btn secondary" data-i18n="home.quick_links.title">Go to Public</a>
+      <a href="?page=settings" class="btn" data-i18n="nav.settings">Settings</a>
+    </div>
+  </section>
+
+  <section class="stats-grid">
+    <div class="stat">
+      <div class="num">12</div>
+      <div class="label" data-i18n="home.stats.published">Books published</div>
+    </div>
+    <div class="stat">
+      <div class="num">1.2k</div>
+      <div class="label" data-i18n="home.stats.followers">Followers</div>
+    </div>
+    <div class="stat">
+      <div class="num">34</div>
+      <div class="label" data-i18n="home.stats.orders">Orders</div>
+    </div>
+    <div class="stat">
+      <div class="num">R8,540</div>
+      <div class="label" data-i18n="home.stats.revenue">Revenue</div>
+    </div>
+  </section>
+
+  <section class="quick-links">
+    <a class="quick-link" href="?page=settings">
+      <div class="icon">⚙️</div>
+      <h4 data-i18n="home.quick_links.title">Quick Links</h4>
+      <div class="muted">Open settings, manage language and theme</div>
+    </a>
+    <a class="quick-link" href="?page=public">
+      <div class="icon">📚</div>
+      <h4 data-i18n="home.featured.title">Featured Books</h4>
+      <div class="muted">Browse the public catalog</div>
+    </a>
+    <a class="quick-link" href="?page=home">
+      <div class="icon">📈</div>
+      <h4>Reports</h4>
+      <div class="muted">View simple analytics</div>
+    </a>
+  </section>
+
+  <section class="recent-card">
+    <h3 data-i18n="home.recent.title">Recent Activity</h3>
+    <ul class="recent-list">
+      <li>Admin added "Yskasterte" to featured (2 days ago)</li>
+      <li>Order #1024 placed — R199 (3 days ago)</li>
+      <li>New follower: @bokkie (5 days ago)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3 data-i18n="home.featured.title">Featured Books</h3>
+    <div class="featured-shelf">
+      <div class="featured-card"><img src="Assets/cover-yskasterte.svg" alt="cover"></div>
+      <div class="featured-card"><img src="Assets/cover-plaaskos.svg" alt="cover"></div>
+      <div class="featured-card"><img src="Assets/cover-braaibroodjies.svg" alt="cover"></div>
+    </div>
+  </section>
+
+  <section style="margin-top:18px">
+    <div class="newsletter-card">
+      <div>
+        <strong data-i18n="home.newsletter.title">Stay in the Know</strong>
+        <div class="muted" data-i18n="home.newsletter.desc">Subscribe for updates and new releases</div>
+      </div>
+      <form id="newsletter-form" style="display:flex;gap:8px;min-width:280px">
+        <input type="email" id="newsletter-email" placeholder="Your email" data-i18n-placeholder="home.newsletter.placeholder">
+        <button type="submit" class="btn">Sign up</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="home-footer">
+    <div class="cols container">
+      <div class="col">
+        <h4 data-i18n="footer.company">Company Info</h4>
+        <ul>
+          <li><a href="?page=public">Contact</a></li>
+          <li><a href="?page=public">Our Shops</a></li>
+          <li><a href="?page=public">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 data-i18n="footer.order_info">Order Info</h4>
+        <ul>
+          <li><a href="?page=public">Refund Policy</a></li>
+          <li><a href="?page=public">Shipping Policy</a></li>
+          <li><a href="?page=public">Gift Card</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 data-i18n="footer.connect">Connect with us</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/">facebook</a></li>
+          <li><a href="https://www.instagram.com/">instagram</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4 data-i18n="footer.visit_us">Visit Us</h4>
+        <p class="muted">Clarens, Free State</p>
+        <p class="muted">Bethlehem, Free State</p>
+      </div>
+    </div>
+  </section>
+</div>

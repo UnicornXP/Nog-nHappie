@@ -1,0 +1,16 @@
+{
+  "name": "App2 SPA",
+  "short_name": "App2",
+  "description": "Installable SPA with login, language, and theme support.",
+  "start_url": "./index.html?page=public&lang=en&theme=light",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#1e293b",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "App1 - Simple SPA",
+  "short_name": "App1",
+  "start_url": "./?page=home",
+  "display": "standalone",
+  "scope": "./",
+  "description": "A minimal single-page app with offline support.",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "Assets/Logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

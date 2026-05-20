@@ -1,0 +1,6 @@
+.login-page { padding: 8px 0; }
+.login-page .muted{color:var(--muted)}
+.login-page form{max-width:420px}
+.login-page label{display:flex;flex-direction:column;font-weight:600}
+.login-page input{margin-top:6px;width:100%;box-sizing:border-box}
+.login-page button{min-width:100px}

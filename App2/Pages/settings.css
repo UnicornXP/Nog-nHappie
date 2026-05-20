@@ -1,0 +1,33 @@
+﻿.page-shell {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(47, 38, 24, 0.1);
+  padding: 3rem;
+}
+
+.settings-form {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.settings-form label {
+  display: grid;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #6d5f4f;
+}
+
+.settings-form select {
+  width: 100%;
+  border: 1px solid rgba(47, 38, 24, 0.1);
+  border-radius: 18px;
+  padding: 1rem 1.15rem;
+  background: #fbf6ef;
+  color: #2f2619;
+}
+
+#settingsSaved {
+  margin-top: 1.5rem;
+  color: #7fa97e;
+}
